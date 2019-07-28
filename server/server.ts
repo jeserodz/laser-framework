@@ -7,6 +7,9 @@ import * as bodyParser from 'body-parser';
 import * as passport from 'passport';
 const app = express();
 
+// Boot checks
+require('./utils/boot');
+
 // Load database
 require("./db");
 

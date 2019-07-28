@@ -8,6 +8,7 @@
     "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
     "dev:server": "ts-node-dev server/server.ts",
     "dev:client": "echo \"No client dev script\"",
+    "build:client": "cd client/src && npm run build && cp -rfv ./build/* ../dist",
     "model:create": "ts-node ./node_modules/typeorm/cli.js entity:create",
     "migration:generate": "ts-node ./node_modules/typeorm/cli.js migration:generate",
     "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run",
