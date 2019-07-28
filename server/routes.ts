@@ -5,8 +5,8 @@ import { ValidateToken } from './middlewares';
 const router = Router();
 
 // Auth
-router.post('/signup', AuthController.signup);
-router.post('/login', AuthController.login);
+router.post('/auth/signup', AuthController.signup);
+router.post('/auth/login', AuthController.login);
 
 router.get('/secured', ValidateToken, (req, res) => {
   res.send(req.user);
